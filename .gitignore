@@ -1,0 +1,30 @@
+# Environment files (never commit real secrets)
+.env
+*.env.local
+
+# Node dependencies
+node_modules/
+**/node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Temp transcode scratch space
+/tmp/
+
+# Docker volumes (local dev data)
+.docker-volumes/
+
+# Logs
+*.log
+logs/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp

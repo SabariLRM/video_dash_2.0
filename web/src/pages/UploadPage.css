@@ -1,0 +1,98 @@
+.upload-page { padding: var(--space-xl) 0 var(--space-2xl); }
+
+.upload-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.upload-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-2xl);
+  border: 2px dashed var(--border-subtle);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: center;
+}
+.upload-dropzone:hover,
+.upload-dropzone--active {
+  border-color: var(--accent-primary);
+  background: var(--accent-glow);
+  box-shadow: var(--shadow-glow);
+}
+.upload-dropzone__icon {
+  font-size: 3.5rem;
+  opacity: 0.5;
+  transition: opacity var(--transition-base), transform var(--transition-base);
+}
+.upload-dropzone:hover .upload-dropzone__icon,
+.upload-dropzone--active .upload-dropzone__icon {
+  opacity: 1;
+  transform: translateY(-6px);
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.upload-file-preview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-lg);
+}
+.upload-file-icon { font-size: 1.8rem; flex-shrink: 0; }
+
+.upload-textarea { resize: vertical; min-height: 100px; }
+
+.upload-row {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+.upload-row .form-field { min-width: 160px; }
+
+/* Progress bar */
+.upload-progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.upload-progress__label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.upload-progress__bar {
+  height: 6px;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.upload-progress__fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-cyan));
+  border-radius: var(--radius-full);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+select.input {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23a09cb8'%3E%3Cpath d='M7 7l3 3 3-3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  cursor: pointer;
+}

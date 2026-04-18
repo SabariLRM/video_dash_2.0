@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "HUB 2.0",
+    "slug": "hub-video",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0a0a0f",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a0f"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hub2.video",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Access your photo library to pick videos for playback.",
+        "NSMicrophoneUsageDescription": "Microphone access is not used by this app."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#7c3aed"
+      },
+      "package": "com.hub2.video",
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "READ_MEDIA_VIDEO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "react-native-video",
+        {
+          "enableNotificationControls": true
+        }
+      ],
+      "expo-screen-orientation",
+      "expo-document-picker"
+    ]
+  }
+}
