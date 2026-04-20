@@ -97,15 +97,15 @@ export default function UploadPage() {
   return (
     <div className="upload-page container">
       <div className="upload-wrapper fade-in">
-        <h1 className="font-extrabold text-3xl" style={{ marginBottom: 'var(--space-lg)' }}>
-          <span className="gradient-text">Upload</span> a video
+        <h1 className="font-extrabold text-5xl tracking-tighter uppercase" style={{ marginBottom: 'var(--space-lg)' }}>
+          Upload <span className="text-black">Video</span>
         </h1>
 
         {/* Drop Zone */}
         {!file ? (
           <div
             id="upload-dropzone"
-            className={`upload-dropzone glass-card ${drag ? 'upload-dropzone--active' : ''}`}
+            className={`upload-dropzone ${drag ? 'upload-dropzone--active' : ''}`}
             onClick={() => fileRef.current?.click()}
             onDragOver={(e) => { e.preventDefault(); setDrag(true) }}
             onDragLeave={() => setDrag(false)}
@@ -126,7 +126,7 @@ export default function UploadPage() {
         ) : (
           <form onSubmit={handleSubmit} className="upload-form">
             {/* File preview */}
-            <div className="upload-file-preview glass-card">
+            <div className="upload-file-preview">
               <span className="upload-file-icon">🎬</span>
               <div>
                 <p className="font-semi text-sm">{file.name}</p>

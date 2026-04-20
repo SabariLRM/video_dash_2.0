@@ -75,8 +75,8 @@ export default function MyVideosPage() {
     <div className="my-videos-page container fade-in">
       <div className="my-videos-header">
         <div>
-          <h1 className="text-2xl font-bold">My Videos</h1>
-          <p className="text-secondary mt-1">Manage and view your uploaded content</p>
+          <h1 className="text-4xl font-extrabold uppercase tracking-tighter">My Videos</h1>
+          <p className="font-medium text-secondary mt-1">Manage and view your uploaded content</p>
         </div>
         <Link to="/upload" className="btn btn-primary">
           <span>＋</span> Upload Video
@@ -84,9 +84,9 @@ export default function MyVideosPage() {
       </div>
 
       {error ? (
-        <div className="glass-card text-center text-error p-8">{error}</div>
+        <div className="text-center text-error p-8 border-black border-2 rounded-lg">{error}</div>
       ) : videos.length === 0 ? (
-        <div className="glass-card my-videos-empty">
+        <div className="my-videos-empty">
           <div className="my-videos-empty-icon">📁</div>
           <h2>No videos uploaded yet</h2>
           <p className="text-secondary">Your uploaded videos (including private ones) will appear here.</p>
@@ -95,7 +95,7 @@ export default function MyVideosPage() {
       ) : (
         <div className="my-videos-grid">
           {videos.map((v) => (
-            <Link to={`/watch/${v._id}`} key={v._id} className="my-video-card glass-card">
+            <Link to={`/watch/${v._id}`} key={v._id} className="my-video-card">
               <div className="my-video-card__thumb">
                 {v.thumbnailUrl ? (
                   <img src={v.thumbnailUrl} alt={v.title} loading="lazy" />
@@ -141,7 +141,7 @@ export default function MyVideosPage() {
       {/* Edit Modal */}
       {editingVideo && (
         <div className="hub-modal-backdrop" onClick={() => setEditingVideo(null)}>
-          <div className="hub-modal-content glass-card" onClick={(e) => e.stopPropagation()}>
+          <div className="hub-modal-content" onClick={(e) => e.stopPropagation()}>
             <h2 className="text-xl font-bold mb-4">Edit Video</h2>
             <form onSubmit={handleUpdate} className="flex flex-col gap-4">
               <div className="form-group flex flex-col gap-1">

@@ -9,7 +9,7 @@ function VideoCard({ video }) {
   const views = video.viewCount?.toLocaleString() || '0'
 
   return (
-    <Link to={`/watch/${video._id}`} className="video-card glass-card" id={`video-${video._id}`}>
+    <Link to={`/watch/${video._id}`} className="video-card" id={`video-${video._id}`}>
       {/* Thumbnail */}
       <div className="video-card__thumb">
         {video.thumbnailUrl
@@ -92,11 +92,11 @@ export default function HomePage() {
         <section className="home-hero">
           <div className="container">
             <h1 className="home-hero__title">
-              Stream anything.{' '}
-              <span className="gradient-text">Everywhere.</span>
+              Video for<br />
+              <span className="text-black">The Modern Web.</span>
             </h1>
-            <p className="home-hero__sub text-secondary">
-              Encrypted, adaptive HLS streaming · Local-first · Zero-compromise quality
+            <p className="home-hero__sub">
+              Mux Dash provides the most powerful, adaptive video streaming infrastructure for developers.
             </p>
           </div>
         </section>

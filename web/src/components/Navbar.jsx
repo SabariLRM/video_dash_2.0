@@ -17,8 +17,8 @@ export default function Navbar() {
       <div className="navbar-inner container">
         {/* Logo */}
         <Link to="/" className="navbar-logo">
-          <span className="logo-icon">▶</span>
-          <span className="gradient-text font-extrabold text-xl">HUB 2.0</span>
+          <span className="logo-icon">●</span>
+          <span className="text-black font-extrabold text-2xl tracking-tighter">HUB 2.0</span>
         </Link>
 
         {/* Search */}

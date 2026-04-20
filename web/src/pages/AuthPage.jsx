@@ -34,17 +34,13 @@ function AuthForm({ mode }) {
 
   return (
     <div className="auth-page">
-      {/* Glow orbs */}
-      <div className="auth-orb auth-orb--1" />
-      <div className="auth-orb auth-orb--2" />
-
-      <div className="auth-card glass-card fade-in">
+      <div className="auth-card fade-in">
         {/* Header */}
         <div className="auth-header">
-          <span className="auth-logo-icon">▶</span>
-          <h1 className="gradient-text font-extrabold text-3xl">HUB 2.0</h1>
-          <p className="text-secondary text-sm" style={{ marginTop: 4 }}>
-            {isLogin ? 'Welcome back' : 'Create your account'}
+          <span className="auth-logo-icon">●</span>
+          <h1 className="text-black font-extrabold text-4xl uppercase tracking-tighter">HUB 2.0</h1>
+          <p className="text-secondary font-bold" style={{ marginTop: 4 }}>
+            {isLogin ? 'WELCOME BACK' : 'CREATE YOUR ACCOUNT'}
           </p>
         </div>
 

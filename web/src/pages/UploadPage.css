@@ -15,17 +15,18 @@
   justify-content: center;
   gap: var(--space-md);
   padding: var(--space-2xl);
-  border: 2px dashed var(--border-subtle);
+  border: var(--border-black);
   border-radius: var(--radius-lg);
   cursor: pointer;
   transition: all var(--transition-base);
   text-align: center;
+  background: var(--bg-surface);
 }
 .upload-dropzone:hover,
 .upload-dropzone--active {
+  transform: translate(-6px, -6px);
+  box-shadow: 10px 10px 0px #000;
   border-color: var(--accent-primary);
-  background: var(--accent-glow);
-  box-shadow: var(--shadow-glow);
 }
 .upload-dropzone__icon {
   font-size: 3.5rem;
@@ -49,6 +50,9 @@
   align-items: center;
   gap: var(--space-md);
   padding: var(--space-md) var(--space-lg);
+  border: var(--border-black);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
 }
 .upload-file-icon { font-size: 1.8rem; flex-shrink: 0; }
 
@@ -75,17 +79,17 @@
   font-weight: 500;
 }
 .upload-progress__bar {
-  height: 6px;
-  background: var(--bg-elevated);
+  height: 12px;
+  background: #000;
   border-radius: var(--radius-full);
   overflow: hidden;
+  border: var(--border-thin);
 }
 .upload-progress__fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-cyan));
+  background: var(--accent-primary);
   border-radius: var(--radius-full);
   transition: width 0.3s ease;
-  box-shadow: 0 0 10px var(--accent-glow);
 }
 
 select.input {

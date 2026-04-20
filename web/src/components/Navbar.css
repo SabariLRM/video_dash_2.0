@@ -2,11 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(10, 10, 15, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-subtle);
-  height: 64px;
+  background: #ffffff;
+  border-bottom: var(--border-black);
+  height: 72px;
 }
 
 .navbar-inner {
@@ -26,9 +24,8 @@
 .navbar-logo:hover { opacity: 0.85; }
 
 .logo-icon {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   color: var(--accent-primary);
-  filter: drop-shadow(0 0 8px var(--accent-glow));
 }
 
 .navbar-search {
@@ -50,20 +47,17 @@
 }
 
 .navbar-link {
-  color: var(--text-secondary);
-  font-size: 0.875rem;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-subtle);
-  transition: color var(--transition-fast), background var(--transition-fast), border-color var(--transition-fast);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
   white-space: nowrap;
-  letter-spacing: 0.02em;
 }
 .navbar-link:hover {
-  color: var(--accent-primary-light, #a78bfa);
-  background: rgba(124,58,237,0.1);
-  border-color: rgba(124,58,237,0.4);
+  background: var(--text-primary);
+  color: #fff;
 }
 
 .navbar-actions {
@@ -75,19 +69,22 @@
 }
 
 .navbar-avatar {
-  width: 36px;
-  height: 36px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
+  width: 40px;
+  height: 40px;
+  background: var(--accent-primary);
+  border: var(--border-black);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 0.875rem;
+  font-weight: 800;
+  font-size: 0.9rem;
   color: #fff;
   cursor: pointer;
   flex-shrink: 0;
-  box-shadow: 0 0 12px var(--accent-glow);
   transition: transform var(--transition-fast);
 }
-.navbar-avatar:hover { transform: scale(1.08); }
+.navbar-avatar:hover { 
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px #000;
+}

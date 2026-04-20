@@ -19,6 +19,9 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
+  border: var(--border-black);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
 }
 
 .my-videos-empty-icon {
@@ -97,6 +100,7 @@
   margin: 0;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -117,12 +121,12 @@
 
 .hub-modal-content {
   background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
+  border: var(--border-black);
   width: 100%;
   max-width: 500px;
-  border-radius: 12px;
-  padding: 32px;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.6);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: 12px 12px 0px #000;
   animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 

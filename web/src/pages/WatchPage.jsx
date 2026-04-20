@@ -56,7 +56,7 @@ export default function WatchPage() {
   if (error) {
     return (
       <div className="watch-error container">
-        <div className="glass-card watch-error__card fade-in">
+        <div className="watch-error__card fade-in">
           <p className="text-2xl">⛔</p>
           <p className="text-lg font-semi">{error}</p>
           <button className="btn btn-ghost" onClick={() => navigate(-1)}>Go back</button>
@@ -90,7 +90,7 @@ export default function WatchPage() {
           />
 
           {/* Video metadata */}
-          <div className="watch-meta glass-card">
+          <div className="watch-meta">
             <div className="watch-meta__header">
               <div>
                 <h1 className="watch-title">{video.title}</h1>
@@ -168,7 +168,7 @@ export default function WatchPage() {
                 <Link
                   key={v._id}
                   to={`/watch/${v._id}`}
-                  className="watch-related-card glass-card"
+                  className="watch-related-card"
                   id={`related-${v._id}`}
                 >
                   <div className="watch-related-card__thumb">
